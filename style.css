@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100vw;
+	height: 100vh;
+	background-color: #CFC1F4;
+}
+img {
+	position: absolute;
+}
+
+.bday {
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.bday-girl {
+	position: relative;
+	width: 30vw;
+	aspect-ratio: 1;
+	background-color: red;
+}
+.bday div {
+	font-size: 5rem;
+	font-weight: bold;
+	color: #611A8C;
+}
+
+.i-love-you {
+	position: absolute;
+	top: 20px;
+}
+.blow-button {
+	z-index: 1;
+	transition: 0.1s transform;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	font-size: 3rem;
+	font-weight: bold;
+	color: #611A8C;
+
+	top: 50px;
+	left: calc(50% - 100px);
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	border-radius: 50%;
+	box-shadow: 0 5px 5px black;
+}
+
+.blow-button:hover {
+	transform: scale(1.1);
+}
+
+
+.text-container {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text-container {
+	position: relative;
+}
+
+.blow-me {
+	font-size: 5rem;
+	font-weight: bold;
+	color: #fff;
+	animation: riseAndFade 2s ease-in-out;
+}
+
+/* Animation */
+@keyframes riseAndFade {
+	0% {
+		opacity: 1;
+		transform: translate(0, 0) rotate(0deg);
+	}
+	100% {
+		opacity: 0.0;
+		transform: translate(30px, -80px) rotate(10deg); /* Slightly right and rotated */
+	}
+}
+
+
+.blow-me.left {
+	animation: riseAndFadeLeft 2s ease-in-out;
+}
+
+@keyframes riseAndFadeLeft {
+	0% {
+		opacity: 1;
+		transform: translate(0, 0) rotate(0deg);
+	}
+	100% {
+		opacity: 0;
+		transform: translate(-30px, -80px) rotate(-10deg);
+	}
+}
